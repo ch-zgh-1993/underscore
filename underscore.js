@@ -2,6 +2,7 @@
 //     http://underscorejs.org
 //     (c) 2009-2017 Jeremy Ashkenas, DocumentCloud and Investigative Reporters & Editors
 //     Underscore may be freely distributed under the MIT license.
+//搜索 ~读到这里啦~
 
 (function() {
 
@@ -282,7 +283,6 @@
     }
     return false;
   };
-
   // Determine if the array or object contains a given item (using `===`).
   // Aliased as `includes` and `include`.
   _.contains = _.includes = _.include = function(obj, item, fromIndex, guard) {
@@ -312,7 +312,7 @@
       return method == null ? method : method.apply(context, args);
     });
   });
-
+//   读到这里啦
   // Convenience version of a common use case of `map`: fetching a property.
   _.pluck = function(obj, key) {
     return _.map(obj, _.property(key));
