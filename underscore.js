@@ -1,8 +1,10 @@
+
 //     Underscore.js 1.8.3
 //     http://underscorejs.org
 //     (c) 2009-2017 Jeremy Ashkenas, DocumentCloud and Investigative Reporters & Editors
 //     Underscore may be freely distributed under the MIT license.
 //搜索 ~ 读到这里啦 ~
+// 不理解的内容 ~ XX ~
 
 (function() {
 
@@ -312,12 +314,12 @@
       return method == null ? method : method.apply(context, args);
     });
   });
-//   读到这里啦
+
   // Convenience version of a common use case of `map`: fetching a property.
   _.pluck = function(obj, key) {
     return _.map(obj, _.property(key));
   };
-
+//   读到这里啦
   // Convenience version of a common use case of `filter`: selecting only objects
   // containing specific `key:value` pairs.
   _.where = function(obj, attrs) {
@@ -1332,6 +1334,7 @@
 
   // Optimize `isFunction` if appropriate. Work around some typeof bugs in old v8,
   // IE 11 (#1621), Safari 8 (#1929), and PhantomJS (#2236).
+  //XX
   var nodelist = root.document && root.document.childNodes;
   if (typeof /./ != 'function' && typeof Int8Array != 'object' && typeof nodelist != 'function') {
     _.isFunction = function(obj) {
