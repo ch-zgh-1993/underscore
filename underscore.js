@@ -319,13 +319,13 @@
   _.pluck = function(obj, key) {
     return _.map(obj, _.property(key));
   };
-//   读到这里啦
+
   // Convenience version of a common use case of `filter`: selecting only objects
   // containing specific `key:value` pairs.
   _.where = function(obj, attrs) {
     return _.filter(obj, _.matcher(attrs));
   };
-
+//   读到这里啦
   // Convenience version of a common use case of `find`: getting the first object
   // containing specific `key:value` pairs.
   _.findWhere = function(obj, attrs) {
@@ -966,12 +966,13 @@
   // ----------------
 
   // Keys in IE < 9 that won't be iterated by `for key in ...` and thus missed.
+//   XX
   var hasEnumBug = !{toString: null}.propertyIsEnumerable('toString');
   var nonEnumerableProps = ['valueOf', 'isPrototypeOf', 'toString',
                       'propertyIsEnumerable', 'hasOwnProperty', 'toLocaleString'];
 
   var collectNonEnumProps = function(obj, keys) {
-    var nonEnumIdx = nonEnumerableProps.length;
+    var nonEnumId = nonEnumerableProps.length;
     var constructor = obj.constructor;
     var proto = _.isFunction(constructor) && constructor.prototype || ObjProto;
 
